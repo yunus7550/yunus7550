@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secret Love Note</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #ffebf0;
+            color: #333;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .message-container {
+            text-align: center;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: none; /* Hide initially */
+        }
+        h1 {
+            font-size: 2.5rem;
+            color: #ff6b6b;
+        }
+        .open-button {
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            color: #fff;
+            background-color: #ff6b6b;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .open-button:hover {
+            background-color: #ff4a4a;
+        }
+    </style>
+</head>
+<body>
+    <!-- Button to reveal the message -->
+    <button class="open-button" onclick="revealMessage()">Open</button>
+
+    <!-- Hidden message container -->
+    <div class="message-container" id="message">
+        <h1>I love you, Farah ❤️</h1>
+    </div>
+
+    <script>
+        // Function to reveal the hidden message
+        function revealMessage() {
+            document.getElementById("message").style.display = "block";
+            document.querySelector(".open-button").style.display = "none";
+        }
+    </script>
+</body>
+</html>
